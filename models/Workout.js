@@ -13,37 +13,33 @@ const WorkoutSchema = new Schema({
       type: {
         type: String,
         trim: true,
-        required: true
+        required: true,
       },
       name: {
         type: String,
         trim: true,
-        required: true
+        required: true,
       },
       duration: {
         type: Number,
-        required: true
+        required: true,
       },
       weight: {
-        type: Number,
-        required: true
+        type: Number
       },
       reps: {
-        type: Number,
-        required: true
+        type: Number
       },
       sets: {
-        type: Number,
-        required: true
+        type: Number
       },
       distance: {
-        type: Number,
-        required: true
+        type: Number
       },
     },
   ],
 });
-
+//add a property to schema use property called virtual
 // {
 //   day: new Date().setDate(new Date().getDate()-10),
 //   exercises: [

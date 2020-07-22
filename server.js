@@ -15,11 +15,13 @@ app.use(express.json());
 
 app.use(express.static("public"));
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", { useNewUrlParser: true });
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", { useNewUrlParser: true,
+useFindAndModify: false
+});
 
-require("./routes/apiRoutes")(app);
-require("./routes/htmlRoutes")(app);
-// not sure if i need this
+require("./routes/apiRoutes.js")(app);
+require("./routes/htmlRoutes.js")(app);
+
 
 
 
